@@ -6,7 +6,7 @@ metadata:
 spec:
   interval: 30s
   ref:
-    branch: master
+    branch: main
   secretRef:
     name: demo-app
   url: https://github.com/tanthanhkid/eksa-demo-app.git
