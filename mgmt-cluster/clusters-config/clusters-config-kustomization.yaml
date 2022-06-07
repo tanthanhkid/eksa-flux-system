@@ -1,0 +1,14 @@
+apiVersion: kustomize.toolkit.fluxcd.io/v1beta1
+kind: Kustomization
+metadata:
+  name: eksa-managed-and-workload-clusters-config
+  namespace: flux-system
+spec:
+  interval: 1m0s
+  path: ./managed-and-workload-clusters
+  prune: true
+  sourceRef:
+    kind: GitRepository
+    name: eksa-clusters-config
+  timeout: 2m0s
+  validation: client

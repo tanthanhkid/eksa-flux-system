@@ -1,0 +1,14 @@
+apiVersion: kustomize.toolkit.fluxcd.io/v1beta1
+kind: Kustomization
+metadata:
+  name: demo-app-config-dev
+  namespace: flux-system
+spec:
+  interval: 1m0s
+  path: ./dev
+  prune: true
+  sourceRef:
+    kind: GitRepository
+    name: demo-app-config-dev
+  timeout: 2m0s
+  validation: client
